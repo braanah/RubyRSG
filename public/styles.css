@@ -1,0 +1,21 @@
+h1, h2{
+  font-family: "Courier New", Courier, monospace; }
+
+h3 {
+  color: rgba(0, 0, 0, 0.79);
+  font-family: 'Dancing Script', cursive; }
+
+.rsg{
+  /*transition-timing-function: ease-in;*/
+  transition: color 3s ease-in;
+  font-size: 3em;
+}
+
+select {
+  /*-webkit-appearance: none;*/
+  /*-moz-appearance: none;*/
+  /*appearance: none;*/
+  height: 30px;
+  width: 300px;
+  text-indent: 30px;
+}

@@ -1,0 +1,47 @@
+doctype html
+html lang="en"
+head
+  title Ruby Random Sentence Generator
+  meta charset="utf-8" /
+  link href="/styles.css" rel="stylesheet" type="text/css" /
+  link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" /
+body
+  h1 Ruby Random Sentence Generator
+  section
+    h2 Choose your poison:
+    select name="selector" id="selector"
+      option value="" Select A Grammar
+      option value="/Bionic-Woman-episode"  Bionic woman episode
+      option value="/Bond-movie"  Bond movie
+      option value="/Civ-paper"  Civ paper
+      option value="/CS-assignment-handout"  CS assignment handout
+      option value="/CS-nightmare"  CS nightmare
+      option value="/Dear-John-letter"  Dear John letter
+      option value="/Extension-request"  Extension request
+      option value="/Friday-13th-movie"  Friday 13th movie
+      option value="/Haiku"  Haiku
+      option value="/How-they-met-story"  How they met story
+      option value="/Kant"  Kant
+      option value="/Math-expression"  Math expression
+      option value="/Microsoft-press-release"  Microsoft press release
+      option value="/Poem"  Poem
+      option value="/Programming-bug"  Programming bug
+      option value="/Wired-sound-bite"  Wired sound bite
+
+    / section
+    div class="rsg"
+      == slim :rsg
+
+
+    javascript:
+      var element = document.getElementById("selector");
+      console.log(element.value);;
+      element.onchange = function(){
+          var gram = this.options[this.selectedIndex];
+          console.log(element.value);
+        // var gram = this.options[this.selectedIndex]
+          if (gram != "")
+            window.open(gram.value, '_self');
+      };
+
+
